@@ -182,3 +182,126 @@ INFO 2019-06-20 15:29:45,835 basehttp 124 "GET /image_codes/f51a4e90-0509-4a94-8
 INFO 2019-06-20 15:29:56,502 basehttp 124 "GET /image_codes/febe3f6f-0f22-4f41-8832-2e226b18eb91/ HTTP/1.1" 200 3438
 WARNING 2019-06-20 15:30:04,131 views 81 发送验证码短信[失败][ mobile: 15111411041 ]
 ERROR 2019-06-20 15:30:04,133 basehttp 124 "GET /sms_codes/15111411041/?text=cyu6&image_code_id=febe3f6f-0f22-4f41-8832-2e226b18eb91 HTTP/1.1" 500 20
+INFO 2019-06-20 23:03:34,917 basehttp 124 "GET /image_codes/3888d341-f0e2-4bad-911f-b22c049a6ffb/ HTTP/1.1" 200 2979
+INFO 2019-06-20 23:04:03,653 basehttp 124 "GET /image_codes/f7447e34-e474-4296-9410-e41a94166c3b/ HTTP/1.1" 200 3329
+WARNING 2019-06-20 23:04:11,810 base 152 Not Found: /usernames/python1/count/
+WARNING 2019-06-20 23:04:11,813 basehttp 124 "GET /usernames/python1/count/ HTTP/1.1" 404 2549
+WARNING 2019-06-20 23:04:21,291 base 152 Not Found: /mobiles/15111411041/count/
+WARNING 2019-06-20 23:04:21,292 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 404 2555
+WARNING 2019-06-20 23:04:27,157 base 152 Not Found: /mobiles/15111411041/count/
+WARNING 2019-06-20 23:04:27,160 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 404 2555
+ERROR 2019-06-20 23:04:27,373 exception 135 Internal Server Error: /sms_codes/15111411041/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/utils/functional.py", line 42, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/transport/virtual/base.py", line 921, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 87, in get
+    send_sms_code.delay(mobile, sms_code, expires, constants.SMS_CODE_TEMP_ID)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/celery/app/task.py", line 427, in delay
+    return self.apply_async(args, kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/celery/app/task.py", line 570, in apply_async
+    **options
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/celery/app/base.py", line 756, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/celery/app/amqp.py", line 552, in send_task_message
+    **properties
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/messaging.py", line 181, in publish
+    exchange_name, declare,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 510, in _ensured
+    return fun(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/messaging.py", line 187, in _publish
+    channel = self.channel
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/messaging.py", line 209, in _get_channel
+    channel = self._channel = channel()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/utils/functional.py", line 44, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/messaging.py", line 224, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 852, in default_channel
+    self.ensure_connection(**conn_opts)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 422, in ensure_connection
+    callback, timeout=timeout)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/utils/functional.py", line 343, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 275, in connect
+    return self.connection
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 823, in connection
+    self._connection = self._establish_connection()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 778, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/transport/virtual/base.py", line 941, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/transport/virtual/base.py", line 923, in create_channel
+    channel = self.Channel(connection)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/transport/redis.py", line 496, in __init__
+    self.Client = self._get_client()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/transport/redis.py", line 957, in _get_client
+    'You have {0.__version__}'.format(redis))
+kombu.exceptions.VersionMismatch: Redis transport requires redis-py versions 3.2.0 or later. You have 2.10.6
+ERROR 2019-06-20 23:04:27,512 basehttp 124 "GET /sms_codes/15111411041/?text=xeir&image_code_id=f7447e34-e474-4296-9410-e41a94166c3b HTTP/1.1" 500 20231
+WARNING 2019-06-20 23:04:28,196 base 152 Not Found: /mobiles/15111411041/count/
+WARNING 2019-06-20 23:04:28,199 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 404 2555
+WARNING 2019-06-20 23:04:28,202 basehttp 124 "GET /sms_codes/15111411041/?text=xeir&image_code_id=f7447e34-e474-4296-9410-e41a94166c3b HTTP/1.1" 400 46
+INFO 2019-06-20 23:04:28,227 basehttp 124 "GET /image_codes/f3e67fad-4102-4484-b3a2-1c711d7aae09/ HTTP/1.1" 200 3246
+WARNING 2019-06-20 23:04:39,404 base 152 Not Found: /mobiles/15111411041/count/
+WARNING 2019-06-20 23:04:39,407 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 404 2555
+WARNING 2019-06-20 23:04:39,410 basehttp 124 "GET /sms_codes/15111411041/?text=f9jo&image_code_id=f3e67fad-4102-4484-b3a2-1c711d7aae09 HTTP/1.1" 400 49
+INFO 2019-06-20 23:04:39,437 basehttp 124 "GET /image_codes/e58f2141-837f-4df2-aab5-9cd11cfc132b/ HTTP/1.1" 200 3170
+WARNING 2019-06-20 23:05:01,217 base 152 Not Found: /usernames/python1/count/
+WARNING 2019-06-20 23:05:01,219 basehttp 124 "GET /usernames/python1/count/ HTTP/1.1" 404 2549
+INFO 2019-06-21 11:01:37,149 basehttp 124 "GET /image_codes/03437ea4-e92b-4df0-a3cd-5ae7f815c4fd/ HTTP/1.1" 200 3116
+INFO 2019-06-21 11:02:00,691 basehttp 124 "GET /usernames/python123/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:02:12,828 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:02:15,966 basehttp 124 "GET /image_codes/1ddfd556-b5e1-4643-b830-58f1a2389468/ HTTP/1.1" 200 3426
+INFO 2019-06-21 11:02:17,398 basehttp 124 "GET /image_codes/b1959fc8-bc87-4871-ba6d-f7c540a26073/ HTTP/1.1" 200 3169
+INFO 2019-06-21 11:02:25,382 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:02:25,563 basehttp 124 "GET /sms_codes/15111411041/?text=brjk&image_code_id=b1959fc8-bc87-4871-ba6d-f7c540a26073 HTTP/1.1" 200 16
+INFO 2019-06-21 11:03:12,100 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-06-21 11:03:12,118 basehttp 124 "GET /usernames/python123/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:03:12,120 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:03:12,268 basehttp 124 "POST /users/ HTTP/1.1" 201 232
+WARNING 2019-06-21 11:03:41,067 tasks 32 发送验证码短信[失败][ mobile: 15111411041 ]
+INFO 2019-06-21 11:03:41,589 basehttp 124 "GET /image_codes/43da1abc-0928-44c0-b3f4-634a92138bf6/ HTTP/1.1" 200 3262
+INFO 2019-06-21 11:03:43,157 basehttp 124 "GET /usernames/python123/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:32:50,869 basehttp 124 "GET /mobiles/14311111111/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:32:54,225 basehttp 124 "GET /image_codes/f6d97dee-a4c2-4fa2-b951-8933166648b3/ HTTP/1.1" 200 3449
+INFO 2019-06-21 11:33:02,919 basehttp 124 "GET /sms_codes/14311111111/?text=cnl3&image_code_id=f6d97dee-a4c2-4fa2-b951-8933166648b3 HTTP/1.1" 200 16
+INFO 2019-06-21 11:33:02,926 basehttp 124 "GET /mobiles/14311111111/count/ HTTP/1.1" 200 34
+WARNING 2019-06-21 11:33:03,228 tasks 32 发送验证码短信[失败][ mobile: 14311111111 ]
+WARNING 2019-06-21 14:42:09,245 basehttp 124 "GET /sms_codes/14311111111/?text=cnl3&image_code_id=f6d97dee-a4c2-4fa2-b951-8933166648b3 HTTP/1.1" 400 46
+INFO 2019-06-21 14:42:09,259 basehttp 124 "GET /mobiles/14311111111/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 14:42:09,311 basehttp 124 "GET /image_codes/331083f1-5d51-4604-b650-b3255ea1ab5b/ HTTP/1.1" 200 3289
+WARNING 2019-06-21 14:42:10,662 basehttp 124 "GET /sms_codes/14311111111/?text=cnl3&image_code_id=331083f1-5d51-4604-b650-b3255ea1ab5b HTTP/1.1" 400 46
+INFO 2019-06-21 14:42:10,674 basehttp 124 "GET /mobiles/14311111111/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 14:42:10,699 basehttp 124 "GET /image_codes/da725d73-86ab-47f2-95c1-e6a631dea473/ HTTP/1.1" 200 3054
+INFO 2019-06-21 14:42:12,624 basehttp 124 "GET /image_codes/487e8759-6390-4f8d-846b-b99f5e7967d4/ HTTP/1.1" 200 3010
+INFO 2019-06-21 14:42:19,404 basehttp 124 "GET /sms_codes/14311111111/?text=bs8d&image_code_id=487e8759-6390-4f8d-846b-b99f5e7967d4 HTTP/1.1" 200 16
+INFO 2019-06-21 14:42:19,415 basehttp 124 "GET /mobiles/14311111111/count/ HTTP/1.1" 200 34
+WARNING 2019-06-21 14:42:19,670 tasks 32 发送验证码短信[失败][ mobile: 14311111111 ]

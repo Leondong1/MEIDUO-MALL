@@ -1,0 +1,328 @@
+WARNING 2019-06-18 03:42:15,515 base 152 Not Found: /
+WARNING 2019-06-18 03:42:15,518 basehttp 124 "GET / HTTP/1.1" 404 2110
+WARNING 2019-06-18 03:42:16,641 base 152 Not Found: /favicon.ico
+WARNING 2019-06-18 03:42:16,642 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2161
+WARNING 2019-06-18 03:42:32,997 base 152 Not Found: /image_codes/11/
+WARNING 2019-06-18 03:42:32,998 basehttp 124 "GET /image_codes/11/ HTTP/1.1" 404 2173
+WARNING 2019-06-18 03:47:08,995 base 152 Not Found: /
+WARNING 2019-06-18 03:47:08,996 basehttp 124 "GET / HTTP/1.1" 404 2109
+WARNING 2019-06-18 03:57:21,235 base 152 Not Found: /
+WARNING 2019-06-18 03:57:21,236 basehttp 124 "GET / HTTP/1.1" 404 2109
+WARNING 2019-06-18 03:57:43,096 base 152 Not Found: /users/login
+WARNING 2019-06-18 03:57:43,097 basehttp 124 "GET /users/login HTTP/1.1" 404 2160
+WARNING 2019-06-18 08:57:26,238 base 152 Not Found: /image_code/11/
+WARNING 2019-06-18 08:57:26,240 basehttp 124 "GET /image_code/11/ HTTP/1.1" 404 2175
+WARNING 2019-06-18 08:57:27,303 base 152 Not Found: /favicon.ico
+WARNING 2019-06-18 08:57:27,304 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2166
+ERROR 2019-06-18 08:58:11,783 exceptions 33 [<verifications.views.ImageCodeView object at 0x10d5d90b8>] Error 61 connecting to 127.0.0.1:6379. Connection refused.
+ERROR 2019-06-18 08:58:11,874 basehttp 124 "GET /image_codes/11/ HTTP/1.1" 507 5310
+INFO 2019-06-18 08:58:12,065 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-06-18 08:58:12,066 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-06-18 08:58:12,066 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-06-18 08:58:12,069 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-06-18 08:58:12,073 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-06-18 08:58:12,074 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2019-06-18 08:58:12,138 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2019-06-18 08:58:12,156 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2019-06-18 08:58:12,158 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO 2019-06-18 08:58:12,158 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-06-18 08:58:12,159 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+ERROR 2019-06-18 09:44:31,948 exceptions 33 [<verifications.views.ImageCodeView object at 0x10d64f1d0>] Error 61 connecting to 127.0.0.1:6379. Connection refused.
+ERROR 2019-06-18 09:44:31,976 basehttp 124 "GET /image_codes/11/ HTTP/1.1" 507 5310
+INFO 2019-06-18 10:05:22,450 basehttp 124 "GET /image_codes/11/ HTTP/1.1" 200 3625
+INFO 2019-06-18 10:05:27,543 basehttp 124 "GET /image_codes/11/ HTTP/1.1" 200 3150
+INFO 2019-06-18 12:49:59,593 basehttp 124 "GET /image_codes/11/ HTTP/1.1" 200 3253
+WARNING 2019-06-18 15:24:38,056 base 152 Not Found: /
+WARNING 2019-06-18 15:24:38,060 basehttp 124 "GET / HTTP/1.1" 404 2109
+WARNING 2019-06-18 15:24:50,288 base 152 Not Found: /register.html
+WARNING 2019-06-18 15:24:50,289 basehttp 124 "GET /register.html HTTP/1.1" 404 2166
+WARNING 2019-06-18 15:27:17,831 base 152 Not Found: /register.html
+WARNING 2019-06-18 15:27:17,836 basehttp 124 "GET /register.html HTTP/1.1" 404 2166
+WARNING 2019-06-18 15:28:50,573 base 152 Not Found: /register.html
+WARNING 2019-06-18 15:28:50,573 basehttp 124 "GET /register.html HTTP/1.1" 404 2166
+WARNING 2019-06-18 19:05:38,587 base 152 Not Found: /
+WARNING 2019-06-18 19:05:38,591 basehttp 124 "GET / HTTP/1.1" 404 2110
+WARNING 2019-06-18 19:05:55,010 base 152 Not Found: /rigister.html
+WARNING 2019-06-18 19:05:55,011 basehttp 124 "GET /rigister.html HTTP/1.1" 404 2167
+WARNING 2019-06-18 19:08:55,957 base 152 Not Found: /register.html
+WARNING 2019-06-18 19:08:55,958 basehttp 124 "GET /register.html HTTP/1.1" 404 2166
+WARNING 2019-06-18 19:54:10,467 base 152 Not Found: /
+WARNING 2019-06-18 19:54:10,504 basehttp 124 "GET / HTTP/1.1" 404 2109
+WARNING 2019-06-18 19:54:24,871 base 152 Not Found: /
+WARNING 2019-06-18 19:54:24,875 basehttp 124 "GET / HTTP/1.1" 404 2115
+INFO 2019-06-18 19:56:08,621 basehttp 124 "GET /image_codes/535c8c3d-8d7b-49e1-ba15-dafce5994587/ HTTP/1.1" 200 3388
+WARNING 2019-06-18 19:57:46,140 base 152 Not Found: /
+WARNING 2019-06-18 19:57:46,143 basehttp 124 "GET / HTTP/1.1" 404 2115
+INFO 2019-06-18 19:58:17,032 basehttp 124 "GET /image_codes/b878894c-c191-4151-97e3-907c1c08709f/ HTTP/1.1" 200 2987
+INFO 2019-06-18 19:58:18,808 basehttp 124 "GET /image_codes/e3a7010e-c542-4344-802b-d6feeb175c8c/ HTTP/1.1" 200 3196
+INFO 2019-06-18 19:58:19,434 basehttp 124 "GET /image_codes/cba034fc-a79e-495f-8535-72ad48db6a92/ HTTP/1.1" 200 3059
+INFO 2019-06-18 19:58:19,907 basehttp 124 "GET /image_codes/b2636053-36b7-446b-8086-105f65a05abf/ HTTP/1.1" 200 3261
+INFO 2019-06-18 19:58:20,175 basehttp 124 "GET /image_codes/798703cf-b422-4c0c-8a48-7bea6bed2cce/ HTTP/1.1" 200 2888
+INFO 2019-06-18 19:58:20,362 basehttp 124 "GET /image_codes/62f382ac-a1ab-479f-96c9-6ad40acf463d/ HTTP/1.1" 200 3484
+INFO 2019-06-18 19:58:20,535 basehttp 124 "GET /image_codes/b13750a1-8db2-4bcd-9be4-d511bbd2851b/ HTTP/1.1" 200 3378
+INFO 2019-06-18 19:58:20,746 basehttp 124 "GET /image_codes/6424ded4-3180-425d-866d-68e6bd4d7e61/ HTTP/1.1" 200 2848
+INFO 2019-06-18 19:58:20,942 basehttp 124 "GET /image_codes/2a04892e-222c-4d89-93c2-8569a51cb94f/ HTTP/1.1" 200 2657
+INFO 2019-06-20 10:18:05,991 basehttp 124 "GET /image_codes/eaacf8b5-cd23-4beb-99ca-d21da9f07207/ HTTP/1.1" 200 2981
+INFO 2019-06-20 10:19:16,268 basehttp 124 "GET /image_codes/8dc7ac14-30eb-4e5d-9a8f-d86f9f2d7c63/ HTTP/1.1" 200 3110
+INFO 2019-06-20 10:48:12,770 basehttp 124 "GET /image_codes/68ec8cf3-14eb-4f67-9ac6-a94c125e4c19/ HTTP/1.1" 200 3011
+INFO 2019-06-20 10:51:55,297 basehttp 124 "GET /image_codes/8eb01501-6ea0-462a-b8eb-f850cd86e3c0/ HTTP/1.1" 200 3381
+WARNING 2019-06-20 10:52:05,143 basehttp 124 "GET /sms_codes/15111111111/?text=scxb&image_code_id=8eb01501-6ea0-462a-b8eb-f850cd86e3c0 HTTP/1.1" 400 46
+INFO 2019-06-20 15:08:52,158 basehttp 124 "GET /image_codes/92f844e6-37ac-43d1-9d47-2352d982f835/ HTTP/1.1" 200 3131
+ERROR 2019-06-20 15:09:13,314 exception 135 Internal Server Error: /sms_codes/15111111111/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 58, in get
+    pl = redis_conn.pipline()
+AttributeError: 'StrictRedis' object has no attribute 'pipline'
+ERROR 2019-06-20 15:09:13,355 basehttp 124 "GET /sms_codes/15111111111/?text=FUVQ&image_code_id=92f844e6-37ac-43d1-9d47-2352d982f835 HTTP/1.1" 500 16322
+WARNING 2019-06-20 15:09:17,462 basehttp 124 "GET /sms_codes/15111111111/?text=FUVQ&image_code_id=92f844e6-37ac-43d1-9d47-2352d982f835 HTTP/1.1" 400 46
+INFO 2019-06-20 15:09:17,529 basehttp 124 "GET /image_codes/09c30883-ee68-46b3-b961-56a20529b4b4/ HTTP/1.1" 200 3021
+ERROR 2019-06-20 15:09:31,714 exception 135 Internal Server Error: /sms_codes/15111111111/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 58, in get
+    pl = redis_conn.pipline()
+AttributeError: 'StrictRedis' object has no attribute 'pipline'
+ERROR 2019-06-20 15:09:31,732 basehttp 124 "GET /sms_codes/15111111111/?text=EZMH&image_code_id=09c30883-ee68-46b3-b961-56a20529b4b4 HTTP/1.1" 500 16322
+WARNING 2019-06-20 15:09:32,744 basehttp 124 "GET /sms_codes/15111111111/?text=EZMH&image_code_id=09c30883-ee68-46b3-b961-56a20529b4b4 HTTP/1.1" 400 46
+INFO 2019-06-20 15:09:32,774 basehttp 124 "GET /image_codes/b6c57551-501e-4f40-a66f-4caa261150b4/ HTTP/1.1" 200 3434
+ERROR 2019-06-20 15:10:36,052 exception 135 Internal Server Error: /sms_codes/15111111111/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 58, in get
+    pl = redis_conn.pipline()
+AttributeError: 'StrictRedis' object has no attribute 'pipline'
+ERROR 2019-06-20 15:10:36,097 basehttp 124 "GET /sms_codes/15111111111/?text=rfap&image_code_id=b6c57551-501e-4f40-a66f-4caa261150b4 HTTP/1.1" 500 16322
+WARNING 2019-06-20 15:10:40,003 basehttp 124 "GET /sms_codes/15111111111/?text=rfap&image_code_id=b6c57551-501e-4f40-a66f-4caa261150b4 HTTP/1.1" 400 46
+INFO 2019-06-20 15:10:40,065 basehttp 124 "GET /image_codes/f4ffc2f1-abef-46c7-a9bb-bf2231dd8e87/ HTTP/1.1" 200 3777
+ERROR 2019-06-20 15:12:53,902 exception 135 Internal Server Error: /sms_codes/15111111111/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 58, in get
+    pl = redis_conn.pipline()
+AttributeError: 'StrictRedis' object has no attribute 'pipline'
+ERROR 2019-06-20 15:12:53,953 basehttp 124 "GET /sms_codes/15111111111/?text=mukg&image_code_id=f4ffc2f1-abef-46c7-a9bb-bf2231dd8e87 HTTP/1.1" 500 16322
+INFO 2019-06-20 15:17:55,925 basehttp 124 "GET /image_codes/88e6a75e-5a7f-42c7-81bd-d8e7fb1085e6/ HTTP/1.1" 200 3264
+WARNING 2019-06-20 15:18:10,966 views 81 发送验证码短信[失败][ mobile: 15111111111 ]
+ERROR 2019-06-20 15:18:10,967 basehttp 124 "GET /sms_codes/15111111111/?text=vase&image_code_id=88e6a75e-5a7f-42c7-81bd-d8e7fb1085e6 HTTP/1.1" 500 20
+WARNING 2019-06-20 15:18:13,857 basehttp 124 "GET /sms_codes/15111111111/?text=vase&image_code_id=88e6a75e-5a7f-42c7-81bd-d8e7fb1085e6 HTTP/1.1" 400 46
+INFO 2019-06-20 15:18:13,892 basehttp 124 "GET /image_codes/06bbe231-1cae-4208-b196-fe3a41e90ea1/ HTTP/1.1" 200 3056
+WARNING 2019-06-20 15:18:22,016 basehttp 124 "GET /sms_codes/15111111111/?text=vgxc&image_code_id=06bbe231-1cae-4208-b196-fe3a41e90ea1 HTTP/1.1" 400 49
+INFO 2019-06-20 15:18:22,048 basehttp 124 "GET /image_codes/40c15481-8dc4-4668-a4a9-1ee32001b6e4/ HTTP/1.1" 200 2975
+WARNING 2019-06-20 15:19:31,166 views 81 发送验证码短信[失败][ mobile: 15111411041 ]
+ERROR 2019-06-20 15:19:31,169 basehttp 124 "GET /sms_codes/15111411041/?text=cxpv&image_code_id=40c15481-8dc4-4668-a4a9-1ee32001b6e4 HTTP/1.1" 500 20
+WARNING 2019-06-20 15:24:23,584 basehttp 124 "GET /sms_codes/15111411041/?text=cxpv&image_code_id=40c15481-8dc4-4668-a4a9-1ee32001b6e4 HTTP/1.1" 400 46
+INFO 2019-06-20 15:24:23,630 basehttp 124 "GET /image_codes/3c5f15a9-1071-4625-a7ac-536be025eeb1/ HTTP/1.1" 200 3196
+WARNING 2019-06-20 15:24:32,855 views 81 发送验证码短信[失败][ mobile: 15111411041 ]
+ERROR 2019-06-20 15:24:32,858 basehttp 124 "GET /sms_codes/15111411041/?text=6rus&image_code_id=3c5f15a9-1071-4625-a7ac-536be025eeb1 HTTP/1.1" 500 20
+WARNING 2019-06-20 15:24:33,996 basehttp 124 "GET /sms_codes/15111411041/?text=6rus&image_code_id=3c5f15a9-1071-4625-a7ac-536be025eeb1 HTTP/1.1" 400 46
+INFO 2019-06-20 15:24:34,027 basehttp 124 "GET /image_codes/f030f05e-5c17-4acc-91cd-3e5ff075cfc7/ HTTP/1.1" 200 3163
+INFO 2019-06-20 15:25:25,419 basehttp 124 "GET /image_codes/38052c7b-e610-43ef-ad9b-c2c1810b9e28/ HTTP/1.1" 200 3090
+INFO 2019-06-20 15:29:45,835 basehttp 124 "GET /image_codes/f51a4e90-0509-4a94-87d0-64740ade7250/ HTTP/1.1" 200 3158
+INFO 2019-06-20 15:29:56,502 basehttp 124 "GET /image_codes/febe3f6f-0f22-4f41-8832-2e226b18eb91/ HTTP/1.1" 200 3438
+WARNING 2019-06-20 15:30:04,131 views 81 发送验证码短信[失败][ mobile: 15111411041 ]
+ERROR 2019-06-20 15:30:04,133 basehttp 124 "GET /sms_codes/15111411041/?text=cyu6&image_code_id=febe3f6f-0f22-4f41-8832-2e226b18eb91 HTTP/1.1" 500 20
+INFO 2019-06-20 23:03:34,917 basehttp 124 "GET /image_codes/3888d341-f0e2-4bad-911f-b22c049a6ffb/ HTTP/1.1" 200 2979
+INFO 2019-06-20 23:04:03,653 basehttp 124 "GET /image_codes/f7447e34-e474-4296-9410-e41a94166c3b/ HTTP/1.1" 200 3329
+WARNING 2019-06-20 23:04:11,810 base 152 Not Found: /usernames/python1/count/
+WARNING 2019-06-20 23:04:11,813 basehttp 124 "GET /usernames/python1/count/ HTTP/1.1" 404 2549
+WARNING 2019-06-20 23:04:21,291 base 152 Not Found: /mobiles/15111411041/count/
+WARNING 2019-06-20 23:04:21,292 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 404 2555
+WARNING 2019-06-20 23:04:27,157 base 152 Not Found: /mobiles/15111411041/count/
+WARNING 2019-06-20 23:04:27,160 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 404 2555
+ERROR 2019-06-20 23:04:27,373 exception 135 Internal Server Error: /sms_codes/15111411041/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/utils/functional.py", line 42, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/transport/virtual/base.py", line 921, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 87, in get
+    send_sms_code.delay(mobile, sms_code, expires, constants.SMS_CODE_TEMP_ID)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/celery/app/task.py", line 427, in delay
+    return self.apply_async(args, kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/celery/app/task.py", line 570, in apply_async
+    **options
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/celery/app/base.py", line 756, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/celery/app/amqp.py", line 552, in send_task_message
+    **properties
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/messaging.py", line 181, in publish
+    exchange_name, declare,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 510, in _ensured
+    return fun(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/messaging.py", line 187, in _publish
+    channel = self.channel
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/messaging.py", line 209, in _get_channel
+    channel = self._channel = channel()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/utils/functional.py", line 44, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/messaging.py", line 224, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 852, in default_channel
+    self.ensure_connection(**conn_opts)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 422, in ensure_connection
+    callback, timeout=timeout)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/utils/functional.py", line 343, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 275, in connect
+    return self.connection
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 823, in connection
+    self._connection = self._establish_connection()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/connection.py", line 778, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/transport/virtual/base.py", line 941, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/transport/virtual/base.py", line 923, in create_channel
+    channel = self.Channel(connection)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/transport/redis.py", line 496, in __init__
+    self.Client = self._get_client()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/kombu/transport/redis.py", line 957, in _get_client
+    'You have {0.__version__}'.format(redis))
+kombu.exceptions.VersionMismatch: Redis transport requires redis-py versions 3.2.0 or later. You have 2.10.6
+ERROR 2019-06-20 23:04:27,512 basehttp 124 "GET /sms_codes/15111411041/?text=xeir&image_code_id=f7447e34-e474-4296-9410-e41a94166c3b HTTP/1.1" 500 20231
+WARNING 2019-06-20 23:04:28,196 base 152 Not Found: /mobiles/15111411041/count/
+WARNING 2019-06-20 23:04:28,199 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 404 2555
+WARNING 2019-06-20 23:04:28,202 basehttp 124 "GET /sms_codes/15111411041/?text=xeir&image_code_id=f7447e34-e474-4296-9410-e41a94166c3b HTTP/1.1" 400 46
+INFO 2019-06-20 23:04:28,227 basehttp 124 "GET /image_codes/f3e67fad-4102-4484-b3a2-1c711d7aae09/ HTTP/1.1" 200 3246
+WARNING 2019-06-20 23:04:39,404 base 152 Not Found: /mobiles/15111411041/count/
+WARNING 2019-06-20 23:04:39,407 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 404 2555
+WARNING 2019-06-20 23:04:39,410 basehttp 124 "GET /sms_codes/15111411041/?text=f9jo&image_code_id=f3e67fad-4102-4484-b3a2-1c711d7aae09 HTTP/1.1" 400 49
+INFO 2019-06-20 23:04:39,437 basehttp 124 "GET /image_codes/e58f2141-837f-4df2-aab5-9cd11cfc132b/ HTTP/1.1" 200 3170
+WARNING 2019-06-20 23:05:01,217 base 152 Not Found: /usernames/python1/count/
+WARNING 2019-06-20 23:05:01,219 basehttp 124 "GET /usernames/python1/count/ HTTP/1.1" 404 2549
+INFO 2019-06-21 11:01:37,149 basehttp 124 "GET /image_codes/03437ea4-e92b-4df0-a3cd-5ae7f815c4fd/ HTTP/1.1" 200 3116
+INFO 2019-06-21 11:02:00,691 basehttp 124 "GET /usernames/python123/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:02:12,828 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:02:15,966 basehttp 124 "GET /image_codes/1ddfd556-b5e1-4643-b830-58f1a2389468/ HTTP/1.1" 200 3426
+INFO 2019-06-21 11:02:17,398 basehttp 124 "GET /image_codes/b1959fc8-bc87-4871-ba6d-f7c540a26073/ HTTP/1.1" 200 3169
+INFO 2019-06-21 11:02:25,382 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:02:25,563 basehttp 124 "GET /sms_codes/15111411041/?text=brjk&image_code_id=b1959fc8-bc87-4871-ba6d-f7c540a26073 HTTP/1.1" 200 16
+INFO 2019-06-21 11:03:12,100 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2019-06-21 11:03:12,118 basehttp 124 "GET /usernames/python123/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:03:12,120 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:03:12,268 basehttp 124 "POST /users/ HTTP/1.1" 201 232
+WARNING 2019-06-21 11:03:41,067 tasks 32 发送验证码短信[失败][ mobile: 15111411041 ]
+INFO 2019-06-21 11:03:41,589 basehttp 124 "GET /image_codes/43da1abc-0928-44c0-b3f4-634a92138bf6/ HTTP/1.1" 200 3262
+INFO 2019-06-21 11:03:43,157 basehttp 124 "GET /usernames/python123/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:32:50,869 basehttp 124 "GET /mobiles/14311111111/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 11:32:54,225 basehttp 124 "GET /image_codes/f6d97dee-a4c2-4fa2-b951-8933166648b3/ HTTP/1.1" 200 3449
+INFO 2019-06-21 11:33:02,919 basehttp 124 "GET /sms_codes/14311111111/?text=cnl3&image_code_id=f6d97dee-a4c2-4fa2-b951-8933166648b3 HTTP/1.1" 200 16
+INFO 2019-06-21 11:33:02,926 basehttp 124 "GET /mobiles/14311111111/count/ HTTP/1.1" 200 34
+WARNING 2019-06-21 11:33:03,228 tasks 32 发送验证码短信[失败][ mobile: 14311111111 ]
+WARNING 2019-06-21 14:42:09,245 basehttp 124 "GET /sms_codes/14311111111/?text=cnl3&image_code_id=f6d97dee-a4c2-4fa2-b951-8933166648b3 HTTP/1.1" 400 46
+INFO 2019-06-21 14:42:09,259 basehttp 124 "GET /mobiles/14311111111/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 14:42:09,311 basehttp 124 "GET /image_codes/331083f1-5d51-4604-b650-b3255ea1ab5b/ HTTP/1.1" 200 3289
+WARNING 2019-06-21 14:42:10,662 basehttp 124 "GET /sms_codes/14311111111/?text=cnl3&image_code_id=331083f1-5d51-4604-b650-b3255ea1ab5b HTTP/1.1" 400 46
+INFO 2019-06-21 14:42:10,674 basehttp 124 "GET /mobiles/14311111111/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 14:42:10,699 basehttp 124 "GET /image_codes/da725d73-86ab-47f2-95c1-e6a631dea473/ HTTP/1.1" 200 3054
+INFO 2019-06-21 14:42:12,624 basehttp 124 "GET /image_codes/487e8759-6390-4f8d-846b-b99f5e7967d4/ HTTP/1.1" 200 3010
+INFO 2019-06-21 14:42:19,404 basehttp 124 "GET /sms_codes/14311111111/?text=bs8d&image_code_id=487e8759-6390-4f8d-846b-b99f5e7967d4 HTTP/1.1" 200 16
+INFO 2019-06-21 14:42:19,415 basehttp 124 "GET /mobiles/14311111111/count/ HTTP/1.1" 200 34
+WARNING 2019-06-21 14:42:19,670 tasks 32 发送验证码短信[失败][ mobile: 14311111111 ]
+INFO 2019-06-21 21:12:00,054 basehttp 124 "GET /image_codes/a3cbe05c-be66-4a18-911d-9b71fc13060e/ HTTP/1.1" 200 3131
+INFO 2019-06-21 21:12:02,911 basehttp 124 "GET /usernames/python123/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 21:12:10,059 basehttp 124 "GET /usernames/python123/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 21:12:21,329 basehttp 124 "GET /usernames/leondongjie/count/ HTTP/1.1" 200 36
+INFO 2019-06-21 21:12:33,371 basehttp 124 "GET /mobiles/15111411041/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 21:12:44,487 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2019-06-21 21:12:44,571 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 214
+INFO 2019-06-21 21:13:24,525 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 214
+INFO 2019-06-21 21:18:48,032 basehttp 124 "GET /image_codes/7aaeee21-fd90-4fda-9781-ca3c0e714cc6/ HTTP/1.1" 200 3125
+INFO 2019-06-21 21:18:50,647 basehttp 124 "GET /usernames/python123/count/ HTTP/1.1" 200 34
+INFO 2019-06-21 21:19:03,062 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2019-06-21 21:19:03,216 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 214
+INFO 2019-06-21 21:35:51,931 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2019-06-21 21:35:52,006 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 214
+INFO 2019-06-21 21:50:07,526 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2019-06-21 21:50:07,595 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 214
+WARNING 2019-06-23 12:29:41,104 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2019-06-23 12:29:41,108 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3212
+WARNING 2019-06-23 12:29:42,643 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2019-06-23 12:29:42,645 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3212
+INFO 2019-06-23 12:34:08,534 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175

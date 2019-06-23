@@ -326,3 +326,110 @@ WARNING 2019-06-23 12:29:41,108 basehttp 124 "GET /oauth/qq/authorization/?next=
 WARNING 2019-06-23 12:29:42,643 base 152 Not Found: /oauth/qq/authorization/
 WARNING 2019-06-23 12:29:42,645 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3212
 INFO 2019-06-23 12:34:08,534 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2019-06-23 20:39:53,531 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2019-06-23 20:40:27,579 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 45, in get
+    access_token = oauth_qq.get_access_token(code)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 70, in get_access_token
+    access_token = resp_dict.get['access_token']
+TypeError: 'builtin_function_or_method' object is not subscriptable
+ERROR 2019-06-23 20:40:27,634 basehttp 124 "GET /oauth/qq/user/?code=24E3C3505B86387D9D783BF191BDD8E9 HTTP/1.1" 500 17062
+ERROR 2019-06-23 20:42:52,496 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 45, in get
+    access_token = oauth_qq.get_access_token(code)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 72, in get_access_token
+    return access_token[0]
+TypeError: 'NoneType' object is not subscriptable
+ERROR 2019-06-23 20:42:52,558 basehttp 124 "GET /oauth/qq/user/?code=24E3C3505B86387D9D783BF191BDD8E9 HTTP/1.1" 500 17000
+INFO 2019-06-23 20:45:43,591 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2019-06-23 20:46:38,515 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 46, in get
+    openid = oauth_qq.get_openid(access_token)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 75, in get_openid
+    url = 'https://graph.qq.com/oauth2.0/me?access_token=' + access_token
+TypeError: must be str, not list
+ERROR 2019-06-23 20:46:38,576 basehttp 124 "GET /oauth/qq/user/?code=DB1115385A1CE96DA0238278465FA91D HTTP/1.1" 500 17003
+INFO 2019-06-23 20:47:21,667 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2019-06-23 20:47:35,510 basehttp 124 "GET /oauth/qq/user/?code=9D25F12AD2F4C39E0BD32EAEF9BF20EA HTTP/1.1" 200 233
+INFO 2019-06-23 20:47:35,685 basehttp 124 "GET /image_codes/1b053069-2601-49d9-bc19-b344e79d097e/ HTTP/1.1" 200 3144
+ERROR 2019-06-24 07:42:39,565 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 50, in get
+    access_token = oauth_qq.get_access_token(code)
+  File "/Users/DZ/Desktop/MEIDUO MALL/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 72, in get_access_token
+    return access_token[0]
+TypeError: 'NoneType' object is not subscriptable
+ERROR 2019-06-24 07:42:39,642 basehttp 124 "GET /oauth/qq/user/?code=9D25F12AD2F4C39E0BD32EAEF9BF20EA HTTP/1.1" 500 17000
+INFO 2019-06-24 07:43:24,413 basehttp 124 "GET /image_codes/6b10f7e5-b3a2-44db-96c7-2b6e91c47462/ HTTP/1.1" 200 3179
+INFO 2019-06-24 07:43:28,881 basehttp 124 "GET /usernames/python123/count/ HTTP/1.1" 200 34
+INFO 2019-06-24 07:43:30,894 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2019-06-24 07:45:12,027 basehttp 124 "GET /oauth/qq/user/?code=47825BEEE9F1ED72EA22767665E80B34 HTTP/1.1" 200 233
+INFO 2019-06-24 07:45:12,076 basehttp 124 "GET /image_codes/be052169-7c12-493c-9a38-f782a5c8c82b/ HTTP/1.1" 200 3380
+INFO 2019-06-24 07:45:47,488 basehttp 124 "GET /sms_codes/15111411041/?text=e7oi&image_code_id=be052169-7c12-493c-9a38-f782a5c8c82b HTTP/1.1" 200 16

@@ -1,0 +1,1 @@
+mysql -uroot -pdongjie931207 meiduo_mall < ./areas.sql

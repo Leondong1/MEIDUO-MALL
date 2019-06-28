@@ -53,6 +53,10 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'verifications.apps.VerificationsConfig',
     'oauth.apps.OauthConfig',
+    'areas.apps.AreasConfig',
+    'contents.apps.ContentsConfig',
+    'goods.apps.GoodsConfig',
+
 
 ]
 
@@ -96,8 +100,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '127.0.0.1',  # 数据库主机
         'PORT': 3306,  # 数据库端口
-        'USER': 'leon',  # 数据库用户名
-        'PASSWORD': 'leon',  # 数据库用户密码
+        'USER': 'root',  # 数据库用户名
+        'PASSWORD': 'dongjie931207',  # 数据库用户密码
         'NAME': 'meiduo_mall'  # 数据库名字
     }
 }
@@ -251,3 +255,14 @@ QQ_CLIENT_ID = '101474184'
 QQ_CLIENT_SECRET = 'c6ce949e04e12ecc909ae6a8b09b637c'
 QQ_REDIRECT_URI = 'http://www.meiduo.site:8080/oauth_callback.html'
 QQ_STATE = '/index.html '
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+#发送邮件的邮箱
+EMAIL_HOST_USER = 'leondongjie@163.com'
+#在邮箱中设置的客户端授权密码
+EMAIL_HOST_PASSWORD = 'wangdongjie123'
+#收件人看到的发件人
+EMAIL_FROM = 'Leon<leondongjie@163.com>'

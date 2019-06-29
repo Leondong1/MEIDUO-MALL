@@ -7,11 +7,15 @@
 @Software: PyCharm
 '''
 from django.conf.urls import url
+from rest_framework.routers import DefaultRouter
+from rest_framework_jwt.views import obtain_jwt_token
+
 from . import views
 
 urlpatterns = [
-    url(r'^qq/authorization/$',views.QQAuthURLView.as_view()),
-    url(r'^qq/user/$',views.QQAuthUserView.as_view()),
-]
 
+]
+router = DefaultRouter()
+router.register('areas',views.AreasViewSet,base_name='areas')
+urlpatterns += router.urls
 

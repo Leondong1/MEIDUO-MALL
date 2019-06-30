@@ -21,6 +21,6 @@ celery_app = Celery('meiduo')
 celery_app.config_from_object('celery_tasks.config')
 
 # 导入任务（因为在启动咱们的任务的时候，还不能自动识别，需要指明）
-celery_app.autodiscover_tasks(['celery_tasks.sms','celery_tasks.email'])
+celery_app.autodiscover_tasks(['celery_tasks.sms','celery_tasks.email','celery_tasks.html'])
 
 

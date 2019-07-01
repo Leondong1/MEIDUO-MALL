@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 # url(r'^usernames/(?P<username>\w{5,20})/count/$', views.UsernameCountView.as_view()),
 from django.shortcuts import render
+from django_redis import get_redis_connection
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView
@@ -15,6 +16,7 @@ from rest_framework.viewsets import GenericViewSet
 
 from users import serializers, constants
 from users.models import User
+from goods.models import SKU
 
 # url(r'^users/$', views.UserView.as_view())
 from users.serializers import UserDetailSerializer
@@ -177,4 +179,26 @@ class AddressViewSet(CreateModelMixin,UpdateModelMixin,GenericViewSet):
         serializer = serializers.AddressTitleSerializer(instance=address, data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
+        return Response(serializer.data)
+
+class UserBrowsingHistoryView(CreateAPIView):
+
+    serializer_class =  serializers.AddUserBrowsingHistorySerializer
+    permission_classes = [IsAuthenticated]
+
+    def get(self,request):
+        # user_id
+        user_id = request.user.id
+        # 查询redis list
+        redis_conn  = get_redis_connection('history')
+        sku_id_list = redis_conn.lrange('history_%s' % user_id,0,constants.USER_BROWSE_HISTORY_MAX_LIMIT)
+
+        # 数据库(因为通过数据库查询的结果是按照数据库的顺序来的)
+        # sku_object_list = SKU.objects.filter(id__in = sku_id_list)
+        skus = []
+        for sku_id in sku_id_list:
+            sku = SKU.objects.get(id= sku_id)
+            skus.append(sku)
+        # 序列化 返回
+        serializer = serializers.SKUSerializer(skus,many = True)
         return Response(serializer.data)

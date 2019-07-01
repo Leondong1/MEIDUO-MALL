@@ -580,3 +580,157 @@ INFO 2019-06-30 17:09:25,595 basehttp 124 "GET /user/ HTTP/1.1" 200 110
 INFO 2019-06-30 18:11:16,579 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
 INFO 2019-06-30 18:11:16,662 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 247
 INFO 2019-06-30 18:11:22,115 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 247
+INFO 2019-06-30 21:52:43,390 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2019-06-30 21:52:43,519 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 247
+INFO 2019-06-30 21:55:54,104 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-06-30 21:55:54,399 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-06-30 21:55:54,644 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+ERROR 2019-06-30 21:55:55,635 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 203, in get
+    serializer = serializers.SKUserializer(skus,many = True)
+AttributeError: module 'users.serializers' has no attribute 'SKUserializer'
+ERROR 2019-06-30 21:55:55,722 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 18314
+INFO 2019-06-30 21:56:13,208 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-06-30 21:56:13,357 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 203, in get
+    serializer = serializers.SKUserializer(skus,many = True)
+AttributeError: module 'users.serializers' has no attribute 'SKUserializer'
+ERROR 2019-06-30 21:56:13,451 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 18314
+INFO 2019-06-30 21:58:39,313 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-06-30 21:58:39,419 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 2
+INFO 2019-07-01 09:03:50,700 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-01 09:03:50,820 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-01 09:03:51,115 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-01 09:03:51,154 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 2
+INFO 2019-07-01 09:55:13,896 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-01 09:55:14,042 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-01 09:55:14,155 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-01 09:55:14,191 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 2
+INFO 2019-07-01 09:56:31,423 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-01 09:56:31,557 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-01 09:56:31,686 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-01 09:56:31,723 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 2
+INFO 2019-07-01 10:02:51,844 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-01 10:02:52,061 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 2
+INFO 2019-07-01 10:02:59,931 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-01 10:03:00,108 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-01 10:03:00,173 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-01 10:03:00,256 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 2
+INFO 2019-07-01 14:13:34,469 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-01 14:13:34,654 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-01 14:13:34,887 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-01 14:13:34,963 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 2
+INFO 2019-07-01 19:25:35,126 basehttp 124 "GET /admin/ HTTP/1.1" 200 7506
+INFO 2019-07-01 19:25:35,183 basehttp 124 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2019-07-01 19:25:35,188 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2019-07-01 19:25:35,309 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2019-07-01 19:25:35,455 basehttp 124 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2019-07-01 19:25:35,459 basehttp 124 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2019-07-01 19:25:36,133 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2019-07-01 19:25:36,137 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2019-07-01 19:25:36,139 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+WARNING 2019-07-01 19:25:58,451 base 152 Not Found: /admin/categories/115/skus
+WARNING 2019-07-01 19:25:58,461 basehttp 124 "GET /admin/categories/115/skus HTTP/1.1" 404 10942
+INFO 2019-07-01 19:26:21,695 basehttp 124 "GET /categories/115/skus HTTP/1.1" 301 0
+INFO 2019-07-01 19:26:22,013 basehttp 124 "GET /categories/115/skus/ HTTP/1.1" 200 9429
+INFO 2019-07-01 19:26:22,163 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2019-07-01 19:26:22,193 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-07-01 19:26:22,194 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-07-01 19:26:22,195 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-07-01 19:26:22,217 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-07-01 19:26:22,221 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-07-01 19:26:22,387 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2019-07-01 19:26:22,419 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO 2019-07-01 19:26:22,431 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-07-01 19:26:22,443 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2019-07-01 19:26:22,444 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2019-07-01 19:26:22,606 basehttp 124 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+WARNING 2019-07-01 19:31:08,875 base 152 Not Found: /categories/115/
+INFO 2019-07-01 19:31:08,879 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2019-07-01 19:31:08,896 base 152 Not Found: /categories/115/hotskus/
+WARNING 2019-07-01 19:31:08,898 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7392
+WARNING 2019-07-01 19:31:08,899 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 404 7416
+INFO 2019-07-01 19:31:08,923 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2019-07-01 19:31:09,641 base 152 Not Found: /cart/
+WARNING 2019-07-01 19:31:09,642 basehttp 124 "GET /cart/ HTTP/1.1" 404 7362
+INFO 2019-07-01 19:32:52,440 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2019-07-01 19:32:52,524 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 247
+INFO 2019-07-01 19:34:57,029 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-01 19:34:57,230 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-01 19:34:58,036 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-01 19:34:58,232 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 2
+INFO 2019-07-01 19:35:10,996 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-01 19:35:11,187 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 2
+WARNING 2019-07-01 19:35:23,518 base 152 Not Found: /categories/115/
+INFO 2019-07-01 19:35:23,519 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2019-07-01 19:35:23,521 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7392
+INFO 2019-07-01 19:35:23,607 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2019-07-01 19:35:23,621 base 152 Not Found: /categories/115/hotskus/
+WARNING 2019-07-01 19:35:23,622 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 404 7416
+WARNING 2019-07-01 19:35:23,872 base 152 Not Found: /cart/
+WARNING 2019-07-01 19:35:23,873 basehttp 124 "GET /cart/ HTTP/1.1" 404 7362
+INFO 2019-07-01 19:36:27,640 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 247
+INFO 2019-07-01 19:37:53,517 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 247
+INFO 2019-07-01 19:38:41,162 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 247
+INFO 2019-07-01 19:38:48,375 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 247
+WARNING 2019-07-01 19:39:00,335 base 152 Not Found: /categories/157/
+WARNING 2019-07-01 19:39:00,363 base 152 Not Found: /categories/157/hotskus/
+WARNING 2019-07-01 19:39:00,366 base 152 Not Found: /cart/
+WARNING 2019-07-01 19:39:00,367 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 7392
+WARNING 2019-07-01 19:39:00,380 basehttp 124 "GET /categories/157/hotskus/ HTTP/1.1" 404 7416
+WARNING 2019-07-01 19:39:00,381 basehttp 124 "GET /cart/ HTTP/1.1" 404 7362
+INFO 2019-07-01 19:39:00,384 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+INFO 2019-07-01 21:55:04,930 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2019-07-01 21:55:04,986 base 152 Not Found: /categories/115/hotskus/
+WARNING 2019-07-01 21:55:04,990 base 152 Not Found: /categories/115/
+WARNING 2019-07-01 21:55:05,009 base 152 Not Found: /cart/
+WARNING 2019-07-01 21:55:05,012 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 404 7416
+WARNING 2019-07-01 21:55:05,013 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7392
+WARNING 2019-07-01 21:55:05,014 basehttp 124 "GET /cart/ HTTP/1.1" 404 7362
+INFO 2019-07-01 21:55:05,054 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2019-07-01 23:09:53,736 basehttp 124 "GET /skus/search/?text%20=%20%27%E5%8D%8E%27 HTTP/1.1" 200 8475
+INFO 2019-07-01 23:09:53,962 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-07-01 23:09:53,967 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-07-01 23:09:53,970 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-07-01 23:09:53,971 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-07-01 23:09:53,975 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-07-01 23:09:53,979 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2019-07-01 23:09:53,999 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2019-07-01 23:09:54,022 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-07-01 23:09:54,023 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2019-07-01 23:09:54,026 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO 2019-07-01 23:09:54,045 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458

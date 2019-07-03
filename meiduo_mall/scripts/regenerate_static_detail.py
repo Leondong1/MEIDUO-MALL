@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 '''
 @Time    : 2019-06-30 07:26
@@ -6,13 +7,12 @@
 @File    : regenerate_static_detail.html.py
 @Software: PyCharm
 '''
-#!/usr/bin/env python
-
 """
 功能：手动生成所有SKU的静态detail html文件
 使用方法:
     ./regenerate_detail_html.py
 """
+
 import sys
 sys.path.insert(0, '../')
 

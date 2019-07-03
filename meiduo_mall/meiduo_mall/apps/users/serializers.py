@@ -181,7 +181,7 @@ class AddressTitleSerializer(serializers.ModelSerializer):
 class AddUserBrowsingHistorySerializer(serializers.Serializer):
     sku_id = serializers.IntegerField(label='商品SKU编号',min_value= 1)
 
-    def validate_sku_id(self,value):
+    def validate_sku_id(self, value):
         """
         检验sku_id是否存在
         :param value:
@@ -191,6 +191,8 @@ class AddUserBrowsingHistorySerializer(serializers.Serializer):
             SKU.objects.get(id = value)
         except SKU.DoesNotExist:
             raise serializers.ValidationError('该商品不存在')
+
+        return value
 
     def create(self, validated_data):
         # sku_id

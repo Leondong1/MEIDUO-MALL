@@ -191,13 +191,15 @@ class UserBrowsingHistoryView(CreateAPIView):
         user_id = request.user.id
         # 查询redis list
         redis_conn  = get_redis_connection('history')
-        sku_id_list = redis_conn.lrange('history_%s' % user_id,0,constants.USER_BROWSE_HISTORY_MAX_LIMIT)
+        sku_id_list = redis_conn.lrange('history_%s' % user_id, 0, constants.USER_BROWSE_HISTORY_MAX_LIMIT-1)
+        print(sku_id_list)
 
+        # return Response('ok')
         # 数据库(因为通过数据库查询的结果是按照数据库的顺序来的)
         # sku_object_list = SKU.objects.filter(id__in = sku_id_list)
         skus = []
         for sku_id in sku_id_list:
-            sku = SKU.objects.get(id= sku_id)
+            sku = SKU.objects.get(id = sku_id)
             skus.append(sku)
         # 序列化 返回
         serializer = serializers.SKUSerializer(skus,many = True)

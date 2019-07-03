@@ -734,3 +734,778 @@ INFO 2019-07-01 23:09:54,022 basehttp 124 "GET /static/rest_framework/js/prettif
 INFO 2019-07-01 23:09:54,023 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
 INFO 2019-07-01 23:09:54,026 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
 INFO 2019-07-01 23:09:54,045 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2019-07-01 23:17:18,550 basehttp 124 "GET /skus/search/?text=%E5%8D%8E&page=1&page_size=6 HTTP/1.1" 200 2602
+INFO 2019-07-01 23:17:28,106 basehttp 124 "GET /skus/search/?text=%E5%8D%8E&page=2&page_size=6 HTTP/1.1" 200 1791
+INFO 2019-07-01 23:17:29,791 basehttp 124 "GET /skus/search/?text=%E5%8D%8E&page=1&page_size=6 HTTP/1.1" 200 2602
+INFO 2019-07-03 11:13:00,359 basehttp 124 "GET /skus/search/?text=%E5%8D%8E&page=1&page_size=6 HTTP/1.1" 200 2602
+INFO 2019-07-03 11:13:06,188 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2019-07-03 11:13:06,299 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 247
+WARNING 2019-07-03 11:13:11,953 base 152 Not Found: /categories/115/
+WARNING 2019-07-03 11:13:11,967 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8605
+INFO 2019-07-03 11:13:11,968 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2019-07-03 11:13:11,977 base 152 Not Found: /categories/115/hotskus/
+WARNING 2019-07-03 11:13:11,980 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 404 8629
+INFO 2019-07-03 11:13:12,023 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2019-07-03 11:13:12,067 base 152 Not Found: /cart/
+WARNING 2019-07-03 11:13:12,067 basehttp 124 "GET /cart/ HTTP/1.1" 404 8575
+INFO 2019-07-03 11:13:13,681 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-03 11:13:13,972 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 15
+INFO 2019-07-03 11:13:24,706 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-03 11:13:24,833 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 11:13:24,976 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 200, in get
+    sku = SKU.objects.get(id= sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 11:13:25,101 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20789
+INFO 2019-07-03 11:13:27,539 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 11:13:27,677 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 200, in get
+    sku = SKU.objects.get(id= sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 11:13:27,758 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20789
+WARNING 2019-07-03 11:13:41,353 base 152 Not Found: /cart/
+WARNING 2019-07-03 11:13:41,366 base 152 Not Found: /categories/157/
+WARNING 2019-07-03 11:13:41,372 base 152 Not Found: /categories/157/hotskus/
+WARNING 2019-07-03 11:13:41,373 basehttp 124 "GET /cart/ HTTP/1.1" 404 8575
+WARNING 2019-07-03 11:13:41,376 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 8605
+WARNING 2019-07-03 11:13:41,376 basehttp 124 "GET /categories/157/hotskus/ HTTP/1.1" 404 8629
+INFO 2019-07-03 11:13:41,388 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+INFO 2019-07-03 11:13:43,199 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 15
+INFO 2019-07-03 11:13:54,883 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 11:13:54,964 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 200, in get
+    sku = SKU.objects.get(id= sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 11:13:55,220 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20789
+INFO 2019-07-03 11:14:18,339 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 11:14:18,479 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 200, in get
+    sku = SKU.objects.get(id= sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 11:14:18,563 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20789
+INFO 2019-07-03 12:37:48,769 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-03 12:37:48,990 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-03 12:37:49,560 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+ERROR 2019-07-03 12:37:49,647 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 200, in get
+    sku = SKU.objects.get(id = sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 12:37:49,808 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20790
+WARNING 2019-07-03 12:38:36,461 base 152 Not Found: /categories/115/
+INFO 2019-07-03 12:38:36,470 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2019-07-03 12:38:36,482 base 152 Not Found: /categories/115/hotskus/
+WARNING 2019-07-03 12:38:36,488 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 404 8629
+WARNING 2019-07-03 12:38:36,489 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8605
+INFO 2019-07-03 12:38:36,508 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2019-07-03 12:38:36,715 base 152 Not Found: /cart/
+WARNING 2019-07-03 12:38:36,716 basehttp 124 "GET /cart/ HTTP/1.1" 404 8575
+INFO 2019-07-03 12:38:42,550 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-03 12:38:42,697 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 15
+INFO 2019-07-03 12:39:15,556 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-03 12:39:15,766 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 12:39:15,866 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 200, in get
+    sku = SKU.objects.get(id = sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 12:39:15,966 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20790
+INFO 2019-07-03 12:46:53,478 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 12:46:53,613 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 201, in get
+    sku = SKU.objects.get(id = sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 12:46:53,839 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20790
+INFO 2019-07-03 15:26:55,439 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-03 15:26:55,637 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-03 15:26:56,213 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+ERROR 2019-07-03 15:26:56,275 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 196, in get
+    sku_id_list = int(sku_id_list.decode())
+AttributeError: 'list' object has no attribute 'decode'
+ERROR 2019-07-03 15:26:56,382 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 18888
+INFO 2019-07-03 15:29:01,756 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 15:29:02,226 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 196, in get
+    sku_id_list = int(sku_id_list)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+ERROR 2019-07-03 15:29:02,313 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 18943
+WARNING 2019-07-03 15:29:15,477 base 152 Not Found: /categories/157/
+WARNING 2019-07-03 15:29:15,482 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 8605
+INFO 2019-07-03 15:29:15,499 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+WARNING 2019-07-03 15:29:15,526 base 152 Not Found: /categories/157/hotskus/
+INFO 2019-07-03 15:29:15,527 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2019-07-03 15:29:15,528 basehttp 124 "GET /categories/157/hotskus/ HTTP/1.1" 404 8629
+WARNING 2019-07-03 15:29:15,700 base 152 Not Found: /cart/
+WARNING 2019-07-03 15:29:15,701 basehttp 124 "GET /cart/ HTTP/1.1" 404 8575
+INFO 2019-07-03 15:29:19,521 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 15
+INFO 2019-07-03 15:29:29,157 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 15:29:29,266 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 196, in get
+    sku_id_list = int(sku_id_list)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+ERROR 2019-07-03 15:29:29,320 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 18943
+INFO 2019-07-03 18:59:57,936 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-03 18:59:58,042 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-03 18:59:58,443 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+ERROR 2019-07-03 18:59:58,512 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 201, in get
+    sku = SKU.objects.get(id = sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 18:59:58,819 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20790
+INFO 2019-07-03 19:01:29,106 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 19:01:29,220 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 201, in get
+    sku = SKU.objects.get(id = sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 19:01:29,396 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20790
+WARNING 2019-07-03 19:01:35,779 base 152 Not Found: /categories/157/
+INFO 2019-07-03 19:01:35,780 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2019-07-03 19:01:35,800 base 152 Not Found: /categories/157/hotskus/
+WARNING 2019-07-03 19:01:35,801 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 8605
+WARNING 2019-07-03 19:01:35,809 basehttp 124 "GET /categories/157/hotskus/ HTTP/1.1" 404 8629
+INFO 2019-07-03 19:01:35,821 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+WARNING 2019-07-03 19:01:36,066 base 152 Not Found: /cart/
+WARNING 2019-07-03 19:01:36,067 basehttp 124 "GET /cart/ HTTP/1.1" 404 8575
+INFO 2019-07-03 19:01:37,815 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 15
+INFO 2019-07-03 19:01:41,381 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 19:01:41,466 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 201, in get
+    sku = SKU.objects.get(id = sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 19:01:41,539 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20790
+WARNING 2019-07-03 19:09:54,366 base 152 Not Found: /cart/
+WARNING 2019-07-03 19:09:54,395 base 152 Not Found: /categories/115/hotskus/
+WARNING 2019-07-03 19:09:54,356 base 152 Not Found: /categories/115/
+WARNING 2019-07-03 19:09:54,405 basehttp 124 "GET /cart/ HTTP/1.1" 404 8575
+WARNING 2019-07-03 19:09:54,413 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8605
+WARNING 2019-07-03 19:09:54,429 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 404 8629
+INFO 2019-07-03 19:09:54,732 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2019-07-03 19:13:25,294 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 15
+INFO 2019-07-03 19:13:36,057 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-03 19:15:38,506 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 15
+INFO 2019-07-03 19:18:22,782 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-03 19:18:23,076 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 19:18:23,189 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 201, in get
+    sku = SKU.objects.get(id = sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 19:18:23,384 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20790
+INFO 2019-07-03 19:18:35,094 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 19:18:35,262 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 201, in get
+    sku = SKU.objects.get(id = sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 19:18:35,390 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20790
+INFO 2019-07-03 19:18:36,407 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+ERROR 2019-07-03 19:18:36,524 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/DZ/Desktop/MEIDUOMALL/meiduo_mall/meiduo_mall/apps/users/views.py", line 201, in get
+    sku = SKU.objects.get(id = sku_id)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1210, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1104, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/lookups.py", line 74, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/DZ/leonVEnv/meiduo_mall/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'None'
+ERROR 2019-07-03 19:18:36,604 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20790
+INFO 2019-07-03 19:20:39,829 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-03 19:20:39,927 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 4
+INFO 2019-07-03 19:22:29,189 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2019-07-03 19:22:29,433 base 152 Not Found: /categories/115/hotskus/
+WARNING 2019-07-03 19:22:29,457 base 152 Not Found: /categories/115/
+WARNING 2019-07-03 19:22:29,466 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 404 8629
+WARNING 2019-07-03 19:22:29,478 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8605
+INFO 2019-07-03 19:22:29,562 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2019-07-03 19:22:29,849 base 152 Not Found: /cart/
+WARNING 2019-07-03 19:22:29,867 basehttp 124 "GET /cart/ HTTP/1.1" 404 8575
+INFO 2019-07-03 19:25:33,918 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-03 19:26:30,722 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2019-07-03 19:28:40,846 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-03 19:28:41,085 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-03 19:28:41,337 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 4
+INFO 2019-07-03 19:28:45,494 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-03 19:28:45,743 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 4
+WARNING 2019-07-03 19:28:59,510 base 152 Not Found: /cart/
+WARNING 2019-07-03 19:28:59,540 base 152 Not Found: /categories/119/
+WARNING 2019-07-03 19:28:59,574 base 152 Not Found: /categories/119/hotskus/
+WARNING 2019-07-03 19:28:59,578 basehttp 124 "GET /cart/ HTTP/1.1" 404 8575
+WARNING 2019-07-03 19:28:59,587 basehttp 124 "GET /categories/119/hotskus/ HTTP/1.1" 404 8629
+WARNING 2019-07-03 19:28:59,602 basehttp 124 "GET /categories/119/ HTTP/1.1" 404 8605
+INFO 2019-07-03 19:28:59,627 basehttp 124 "GET /categories/119/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+WARNING 2019-07-03 19:29:07,708 base 152 Not Found: /categories/157/
+WARNING 2019-07-03 19:29:07,737 base 152 Not Found: /cart/
+WARNING 2019-07-03 19:29:07,765 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 8605
+WARNING 2019-07-03 19:29:07,804 base 152 Not Found: /categories/157/hotskus/
+WARNING 2019-07-03 19:29:07,806 basehttp 124 "GET /cart/ HTTP/1.1" 404 8575
+INFO 2019-07-03 19:29:07,809 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+WARNING 2019-07-03 19:29:07,823 basehttp 124 "GET /categories/157/hotskus/ HTTP/1.1" 404 8629
+INFO 2019-07-03 19:29:10,015 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 12
+INFO 2019-07-03 19:29:16,330 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-03 19:29:16,482 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 4
+INFO 2019-07-03 20:07:05,070 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2019-07-03 20:07:05,485 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-03 20:07:05,562 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-03 20:07:05,617 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 440
+WARNING 2019-07-03 20:07:24,824 base 152 Not Found: /categories/115/
+WARNING 2019-07-03 20:07:24,828 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8605
+INFO 2019-07-03 20:07:24,843 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2019-07-03 20:07:24,871 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+WARNING 2019-07-03 20:07:24,920 base 152 Not Found: /categories/115/hotskus/
+WARNING 2019-07-03 20:07:24,920 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 404 8629
+WARNING 2019-07-03 20:07:24,977 base 152 Not Found: /cart/
+WARNING 2019-07-03 20:07:24,978 basehttp 124 "GET /cart/ HTTP/1.1" 404 8575
+INFO 2019-07-03 20:07:27,244 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2019-07-03 20:07:32,274 basehttp 124 "GET /user/ HTTP/1.1" 200 110
+INFO 2019-07-03 20:07:32,361 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 440
+INFO 2019-07-03 20:07:44,483 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13

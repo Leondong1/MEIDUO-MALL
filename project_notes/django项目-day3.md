@@ -10,9 +10,9 @@
 
 
 
-## 三码（IP）合一
+## 三码（IP）合一(注意这里的需求)
 
-1. ubuntu下 ifconfig 查看的ip地址
+1. ubuntu下 ifconfig 查看的ip地址  以及本地环境下的 （/etc/hosts   的IP地址是否一样）
 
 2. 创建storage容器的时候指定的ip
 

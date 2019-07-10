@@ -6,7 +6,7 @@
 @File    : serializers.py
 @Software: PyCharm
 '''
-from goods import serializers
+from rest_framework import serializers
 from goods.models import SKU
 
 
@@ -28,3 +28,14 @@ class CartSerializer(serializers.Serializer):
             raise serializers.ValidationError('商品库存不足')
 
         return data
+
+class CartSKUSerializer(serializers.ModelSerializer):
+    """
+    购物车商品数据序列化器
+    """
+    count = serializers.IntegerField(label='数量')
+    selected = serializers.BooleanField(label='是否勾选')
+
+    class Meta:
+        model = SKU
+        fields = ('id', 'count', 'name', 'default_image_url', 'price', 'selected')

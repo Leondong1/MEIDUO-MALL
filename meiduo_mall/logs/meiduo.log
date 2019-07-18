@@ -1780,3 +1780,22 @@ INFO 2019-07-17 11:05:07,293 basehttp 124 "GET /cart/ HTTP/1.1" 200 713
 INFO 2019-07-17 11:05:21,880 basehttp 124 "GET /cart/ HTTP/1.1" 200 713
 INFO 2019-07-17 11:05:33,113 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
 INFO 2019-07-17 11:05:37,129 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2019-07-18 07:40:53,992 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2019-07-18 07:40:54,635 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
+INFO 2019-07-18 08:01:48,124 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2019-07-18 08:01:48,315 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
+INFO 2019-07-18 08:01:50,620 basehttp 124 "OPTIONS /cart/selection/ HTTP/1.1" 200 0
+INFO 2019-07-18 08:01:50,655 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2019-07-18 08:01:51,323 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+WARNING 2019-07-18 08:01:57,599 base 152 Not Found: /categories/115/
+WARNING 2019-07-18 08:01:57,609 base 152 Not Found: /categories/115/hotskus/
+WARNING 2019-07-18 08:01:57,612 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 404 8947
+WARNING 2019-07-18 08:01:57,614 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8923
+INFO 2019-07-18 08:01:57,644 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
+INFO 2019-07-18 08:01:57,675 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2019-07-18 08:01:59,294 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2019-07-18 08:01:59,948 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2019-07-18 08:02:01,409 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2019-07-18 08:02:05,499 basehttp 124 "GET /cart/ HTTP/1.1" 200 463
+INFO 2019-07-18 08:02:07,294 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+INFO 2019-07-18 08:02:07,921 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
